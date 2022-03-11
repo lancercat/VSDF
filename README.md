@@ -1,20 +1,3 @@
-[UPD] Training and Korean language experiments code uploaded.
-
-[UPD] The zero-shot character recognition datasets are added to the same kaggle dataset now.
-
-[UPD] Models and evaluation datasets are now on Kaggle
-
-[UPD] The training and evaluation code is now tested on a fresh Manjaro. A draft of the manual and an example to modify the network is added now. 
-
-[UPD] All training sets including the close-set training data are uploaded to Kaggle. The Kaggle repo is self-inclusive now.
-
-If the code is still failing, please open an issue or contact me. 
-Since we only use Arch-Linux-based systems (Arch and Manjaro), backward compatibility issues may occur. We will try our best to patch the code should this happen. However, we cannot guarantee a sure fix on backward compatibility issues. 
-
-Also, if you have any questions or concerns about the paper or the code, feel free to open an issue so we can improve them. 
-
-Stay tuned!
-
 # Open-set Text Recognition via Character-Context Decoupling
 
 The main part of the code is located in neko_2021_mjt/standardbench2_candidates
@@ -22,6 +5,13 @@ The main part of the code is located in neko_2021_mjt/standardbench2_candidates
 All data for training and most data for testing (except dictionary based close-set word recogntion) are uploaded to the Kaggle repo:
 
 https://www.kaggle.com/vsdf2898kaggle/osocrtraining
+
+The code has beed tested on a fresh Manjaro. If the code is still failing, please open an issue or contact me. 
+
+Since we only use Arch-Linux-based systems (Arch and Manjaro), backward compatibility issues may occur. We will try our best to patch the code should this happen. However, we cannot guarantee a sure fix on backward compatibility issues. 
+
+Also, if you have any questions or concerns about the paper or the code, feel free to open an issue so we can improve them. 
+
 
 ## Usage 
 Please refer to the manul.pdf. 
