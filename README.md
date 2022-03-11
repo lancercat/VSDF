@@ -6,7 +6,7 @@ All data for training and most data for testing (except dictionary based close-s
 
 https://www.kaggle.com/vsdf2898kaggle/osocrtraining
 
-The code has beed tested on a fresh Manjaro. If the code is still failing, please open an issue or contact me. 
+The code has been tested on a fresh Manjaro. If the code is still failing, please open an issue or contact me. 
 
 Since we only use Arch-Linux-based systems (Arch and Manjaro), backward compatibility issues may occur. We will try our best to patch the code should this happen. However, we cannot guarantee a sure fix on backward compatibility issues. 
 
