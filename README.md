@@ -103,7 +103,7 @@ You need to rearrange them like the following in the ssddata folder.
 ![image](https://user-images.githubusercontent.com/59994105/157666662-db003c7f-baff-4584-bbe9-db5d75d45c12.png)
 
 
-Alternatively, you can use the DAN version. The training set is identical to DAN and can be found here:
+Alternatively, you can use the DAN version, and the datasets can be found here:
 https://github.com/Wang-Tianwei/Decoupled-attention-network
 
 
