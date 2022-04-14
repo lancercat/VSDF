@@ -52,10 +52,11 @@ https://www.techrxiv.org/articles/preprint/Towards_Open-Set_Text_Recognition_via
 Most training datasets and evaluation datasets are now uploaded to 
 https://www.kaggle.com/vsdf2898kaggle/osocrtraining
 
-Please follow the manual (manul.pdf) to proceed evaluation/training.
 
 ALL models used in the paper are now released in the models-release folder (Having 100GB free space is so nice!)
 https://www.kaggle.com/vsdf2898kaggle/osocrtraining?select=models-release
+
+Please follow the manual (manul.pdf) to proceed evaluation/training.
 
 
 ### Open-set text recognition
