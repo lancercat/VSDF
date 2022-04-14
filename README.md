@@ -52,7 +52,7 @@ https://www.techrxiv.org/articles/preprint/Towards_Open-Set_Text_Recognition_via
 Most training datasets and evaluation datasets are now uploaded to 
 https://www.kaggle.com/vsdf2898kaggle/osocrtraining
 
-You will need to manually move the contents from folder ssddata_1 and ssddata_2 to the ssddata folder after downloading
+Please follow the manual (manul.pdf) to proceed evaluation/training.
 
 ALL models used in the paper are now released in the models-release folder (Having 100GB free space is so nice!)
 https://www.kaggle.com/vsdf2898kaggle/osocrtraining?select=models-release
