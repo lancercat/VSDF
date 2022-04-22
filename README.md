@@ -127,6 +127,11 @@ Evaluation is conducted on:
 
 Generally, the regular model takes ~6 Gib to train and less than 1.8 Gib for evaluation, and the large model takes ~11 Gib to train and 2.4 Gib for evaluation.
 
+## Extra Hints
+It may take a while before we can find time to make a detailed tutorial on how to make your very own training set from raw images and fonts.
 
-
-
+However, here are a few hints which may help you hack thru.
+1) There are no extra hacks on lmdbs, what works with DAN should work here.  
+2) There is a vertical filter in the dataloader. If you need vertical capability and are confident with your mods, remove it.
+3) The dict (.pt files) used for training can be generated the same way described in the manual.
+4) GLHF
