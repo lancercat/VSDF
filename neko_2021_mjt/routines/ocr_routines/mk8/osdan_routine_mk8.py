@@ -1,5 +1,7 @@
 
 # using mk5 DTD
+import copy
+
 import torch.nn.functional
 
 from neko_2021_mjt.routines.neko_abstract_routines import neko_abstract_routine,neko_abstract_eval_routine;
@@ -40,6 +42,8 @@ class neko_HDOS2C_routine_CFmk8(neko_HDOS2C_routine_CFmk5):
         this.PROTO_FN=mk_proto_contextual_v1;
         this.context_mod=neko_ctx_subroutine_v1();
         this.attf=temporal_attention_v2;
+
+    # Hard coded case_insensitive logger.
     def set_loggers(this,log_path,log_each,name):
         this.logger_dict = {
             "accr": neko_os_Attention_AR_counter("[" + name + "]" + "train_accr", False),
@@ -137,7 +141,10 @@ class neko_HDOS2C_eval_routine_CFmk8(neko_abstract_eval_routine):
         rot = kwargs["rot"];
         normproto, plabels,gplabels, tdict,gbidict= modular_dict["sampler"].model.dump_allg(metaargs=metaargs,use_sp=False);
         fsp = modular_dict["semantic_branch"]()[:gbidict["[UNK]"] + 1];
-        csp = modular_dict["semantic_branch"](gplabels);
+        if(this.has_ctx):
+            csp = modular_dict["semantic_branch"](gplabels);
+        else:
+            csp = None;
         if (not rot):
             proto = modular_dict["prototyper"](normproto,use_sp=False);
         else:
@@ -157,7 +164,7 @@ class neko_HDOS2C_eval_routine_CFmk8(neko_abstract_eval_routine):
             this.has_ctx=False;
         this.inflater=neko_inflater();
 
-
+# Hard coded case_insensitive logger.
     def set_loggers(this,log_path,name,args):
 
         try:
@@ -228,7 +235,7 @@ class neko_HDOS2C_eval_routine_CFmk8(neko_abstract_eval_routine):
         # A=A.max(dim=2)[0];
         if(label is not None):
             labelwunk=["".join([ch if ch in tdict else "⑨" for ch in w]) for w in label];
-            logger_dict["accr"].add_iter(beams_[0],pred_length, labelwunk)
+            logger_dict["accr"].add_iter(copy.deepcopy(beams_[0]),pred_length, labelwunk)
             if("vdbg"in data_dict and module_dict["ctxmodule"] is not None and label is not None):
                 debug_mk8(choutput,ctx_choutput,label);
             if(module_dict["ctxmodule"] is not None):

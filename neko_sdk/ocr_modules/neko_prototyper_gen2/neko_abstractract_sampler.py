@@ -9,22 +9,22 @@ import regex
 import copy
 class neko_prototype_sampler_static:
 
-    # def set_gbidict(this,oks):
-    #     this.gbidict = {}
-    #     gkset = {};
-    #     gkcnt=0
-    #     for k in oks:
-    #         drk = this.label_dict[k];
-    #         if (drk not in gkset):
-    #             gkset[drk] = gkcnt;
-    #             gkcnt += 1;
-    #         this.label_dict[k] = gkset[drk];
-    #         this.gbidict[k] = gkset[drk];
-    #         if (drk == this.label_dict[k]):
-    #             this.gbidict[gkset[drk]] = k;
-    #         else:
-    #             print("err");
-    #             exit(9);
+    def set_gbidict(this,oks):
+        this.gbidict = {}
+        gkset = {};
+        gkcnt=0
+        for k in oks:
+            drk = this.label_dict[k];
+            if (drk not in gkset):
+                gkset[drk] = gkcnt;
+                gkcnt += 1;
+            this.label_dict[k] = gkset[drk];
+            this.gbidict[k] = gkset[drk];
+            if (drk == this.label_dict[k]):
+                this.gbidict[gkset[drk]] = k;
+            else:
+                print("err");
+                exit(9);
 
     def setup(this,meta):
         this.bidict = {};
@@ -93,7 +93,7 @@ class neko_prototype_sampler_static:
             if (drk == this.label_dict[k]):
                 this.reduced_bidict[kset[drk]] = k;
 
-        # this.set_gbidict(oks);
+        this.set_gbidict(oks);
 
         # Foes includes the characters looks like each other
         # but never share labels (They may actually have linguistic relationships...
