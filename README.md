@@ -14,11 +14,13 @@ Also, if you have any questions or concerns about the paper or the code, feel fr
 
 
 ## Usage 
+
+
+Please refer to the manul.pdf. 
+
 [UPD] Dependency installation can be simplified with the scripts here:
 
 https://github.com/lancercat/make_env/
-
-Please refer to the manul.pdf. 
 
 ## Trained Models 
 All trained models are released in the Kaggle repo.
