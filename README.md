@@ -125,7 +125,8 @@ https://rrc.cvc.uab.es/?ch=14&com=tasks
 ## Infanstructure
 Ablative models are trained on a server with 4 1080tis, 2 E5-2620 v4 CPUs, and 64Gib RAM.
 
-Torch version is 1.7.0 and CUDA version is V10.1.243.
+Torch version is 1.7.1 (sry I previously mistook it as 1.7.0) and CUDA version is V10.1.243.
+![image](https://user-images.githubusercontent.com/59994105/194462501-a830c9e4-7356-4c24-a72a-7721b2ed248c.png)
 
 Evaluation is conducted on:
 1. Laptop with RTX 2070 mobile(~7 Tflops) and I5-9400 (as a reference of low-energy-consumption deployment).
