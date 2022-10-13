@@ -10,6 +10,8 @@ The code has been tested on a fresh Manjaro (by 11-03-2022). If the code fails, 
 
 Since we only use Arch-Linux-based systems (Arch and Manjaro), backward compatibility issues may occur. We will try our best to patch the code should this happen. However, we cannot guarantee a sure fix on backward compatibility issues. 
 
+[UPD] For those who need to run with older packages, please refer to Issue #6, and huge thanks for AeroX's efforts and feedbacks~ 
+
 Also, if you have any questions or concerns about the paper or the code, feel free to open an issue so we can improve them. 
 
 
