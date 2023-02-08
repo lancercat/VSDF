@@ -12,6 +12,8 @@ Since we only use Arch-Linux-based systems (Arch and Manjaro), backward compatib
 
 [UPD] For those who need to run with older packages, please refer to Issue #6, and huge thanks for AeroX's efforts and feedbacks~ 
 
+[UPD] As numpy.float is deprecated, please replace all occurrences of np.float with np.float32 if you encounter a problem.
+
 Also, if you have any questions or concerns about the paper or the code, feel free to open an issue so we can improve them. 
 
 
