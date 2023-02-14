@@ -308,7 +308,9 @@ class neko_abstract_modular_joint_eval(neko_module_set):
         return this.val_tasks[id].test_image(image_path,globalcache)
     def pretest(this,id):
         this.eval_mode();
-        return this.val_tasks[id].testready();
+        with torch.no_grad():
+            tester=this.val_tasks[id].testready();
+        return tester;
 
     def __init__(this,
                  cfgs,mitr):
