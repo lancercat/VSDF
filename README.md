@@ -14,6 +14,8 @@ Since we only use Arch-Linux-based systems (Arch and Manjaro), backward compatib
 
 [UPD] As numpy.float is deprecated, please replace all occurrences of np.float with np.float32 if you encounter a problem.
 
+[UPD] Fixed the high VRAM cost issue in single-image test, as suggested in Issue #7, and huge thanks for XTMeow's solution and feedbacks~ 
+
 Also, if you have any questions or concerns about the paper or the code, feel free to open an issue so we can improve them. 
 
 
