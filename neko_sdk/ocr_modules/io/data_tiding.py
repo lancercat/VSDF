@@ -85,7 +85,7 @@ def neko_DAN_padding(img,ismask,img_height,img_width,target_ratio,qhb_aug,gray):
     else:
         mask = np.zeros([mask_height, mask_width, 3]).astype(np.uint8)
     mask[start_x: start_x + img.shape[0], start_y: start_y + img.shape[1]] = img
-    bmask = np.zeros([mask_height, mask_width]).astype(np.float)
+    bmask = np.zeros([mask_height, mask_width]).astype(np.float32)
     bmask[start_x: start_x + img.shape[0], start_y: start_y + img.shape[1]] = 1
     img = mask
     return img,bmask

@@ -150,15 +150,10 @@ def render_gt(dict,seenchs,gt_word,GT):
     return gtpatchs;
 
 def render_words(dict,seenchs,im,gt_word,pred_words,flag=0):
-    try:
-        PRED = 255 - cv2.resize(cv2.imread("pr.png"), (48, 32));
-    except:
-        PRED = None;
-    try:
-        GT=255-cv2.resize(cv2.imread("gt.png"), (48, 32));
-    except:
-        GT=np.zeros([32,48,3],np.uint8);
-        GT[:,:,:]=255;
+
+    PRED = None;
+    GT=np.zeros([32,48,3],np.uint8);
+    GT[:,:,:]=255;
     try:
         patchs = [
         ]

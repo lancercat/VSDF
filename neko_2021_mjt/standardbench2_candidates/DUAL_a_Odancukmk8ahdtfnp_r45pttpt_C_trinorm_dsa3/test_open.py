@@ -70,6 +70,7 @@ def run_folder(ptfile,sfolder,dfolder,save_root):
 
 if __name__ == '__main__':
     run_folder(find_data_root()+"/dicts/dabgreek.pt",
-               find_data_root()+"/greek/randomdata/",
-               find_data_root()+"/greek/randomdata/open_res/",
+               find_data_root()+"/greek/",
+               find_data_root()+"/greek/open_res/",
                find_model_root()+"//DUAL_a_Odancukmk8ahdtfnp_r45pttpt_C_trinorm_dsa3/jtrmodels");
+    pass;

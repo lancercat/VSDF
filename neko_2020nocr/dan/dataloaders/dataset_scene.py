@@ -109,7 +109,7 @@ class lmdbDataset(Dataset):
         mask = np.zeros([mask_height, mask_width]).astype(np.uint8)
         mask[start_x : start_x + img.shape[0], start_y : start_y + img.shape[1]] = img
 
-        bmask = np.zeros([mask_height, mask_width]).astype(np.float)
+        bmask = np.zeros([mask_height, mask_width]).astype(np.float32)
         bmask[start_x: start_x + img.shape[0], start_y: start_y + img.shape[1]] = 1
         img = mask
         return img,bmask
@@ -206,7 +206,7 @@ class colored_lmdbDatasetT(lmdbDataset):
         mask = np.zeros([mask_height, mask_width,3]).astype(np.uint8)
         mask[start_x : start_x + img.shape[0], start_y : start_y + img.shape[1]] = img
         img = mask
-        bmask = np.zeros([mask_height, mask_width]).astype(np.float)
+        bmask = np.zeros([mask_height, mask_width]).astype(np.float32)
         bmask[start_x: start_x + img.shape[0], start_y: start_y + img.shape[1]] = 1
         return img,bmask
 
@@ -240,7 +240,7 @@ class colored_lmdbDataset(lmdbDataset):
         start_y = int((mask_width - img.shape[1])/2)
         mask = np.zeros([mask_height, mask_width,3]).astype(np.uint8)
         mask[start_x : start_x + img.shape[0], start_y : start_y + img.shape[1]] = img
-        bmask = np.zeros([mask_height, mask_width]).astype(np.float)
+        bmask = np.zeros([mask_height, mask_width]).astype(np.float32)
         bmask[start_x: start_x + img.shape[0], start_y: start_y + img.shape[1]] = 1
         img = mask
         return img,bmask;
@@ -584,7 +584,7 @@ class colored_lmdbDataset_repeatS(lmdbDataset_repeatS):
         start_y = int((mask_width - img.shape[1]) / 2)
         mask = np.zeros([mask_height, mask_width, 3]).astype(np.uint8)
         mask[start_x: start_x + img.shape[0], start_y: start_y + img.shape[1]] = img
-        bmask = np.zeros([mask_height, mask_width]).astype(np.float)
+        bmask = np.zeros([mask_height, mask_width]).astype(np.float32)
         bmask[start_x: start_x + img.shape[0], start_y: start_y + img.shape[1]] = 1
         img = mask
         return img,bmask
@@ -669,7 +669,7 @@ class colored_lmdbDataset_repeatHS(lmdbDataset_repeatHS):
         start_y = int((mask_width - img.shape[1])/2)
         mask = np.zeros([mask_height, mask_width,3]).astype(np.uint8)
         mask[start_x : start_x + img.shape[0], start_y : start_y + img.shape[1]] = img
-        bmask = np.zeros([mask_height, mask_width]).astype(np.float)
+        bmask = np.zeros([mask_height, mask_width]).astype(np.float32)
         bmask[start_x: start_x + img.shape[0], start_y: start_y + img.shape[1]] = 1
         img = mask
         return img,bmask
