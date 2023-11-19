@@ -3,7 +3,7 @@ from configs import model_mod_cfg as modcfg
 from configs import arm_base_mk8_task_default
 from configs import osdanmk8_eval_routine_cfg
 
-from neko_2021_mjt.dss_presets.dual_no_lsct_32 import get_eval_dss,get_eval_dssgosr,get_eval_dssosr;
+from neko_2021_mjt.dss_presets.dual_no_lsct_32 import get_eval_dss,get_eval_dssgosr,get_eval_dssosr,get_eval_dss_ostr;
 def dan_mjst_eval_cfg(
         save_root,dsroot,
         log_path,iterkey,maxT=30):
@@ -25,7 +25,9 @@ def dan_mjst_eval_cfg(
     task_dict = arm_base_mk8_task_default(task_dict, "base_chs_", osdanmk8_eval_routine_cfg, 30,
                                          te_meta_path_chsjapg, chs_eval_dsg,
                                          log_path,force_skip_ctx=True,name="GOSR",measure_rej=True);
-
+    task_dict = arm_base_mk8_task_default(task_dict, "base_chs_", osdanmk8_eval_routine_cfg, 30,
+                                          te_meta_path_chsjap, chs_eval_dsg,
+                                          log_path, force_skip_ctx=True, name="OSTR", measure_rej=True);
 
     return \
     {

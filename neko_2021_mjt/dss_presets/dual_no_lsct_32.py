@@ -4,7 +4,7 @@ from neko_2021_mjt.eval_tasks.dan_eval_tasks import neko_odan_eval_tasks
 from neko_2021_mjt.configs.data.chs_jap_data import get_chs_HScqa,get_eval_jap_color,\
     get_chs_tr_meta,get_chs_sc_meta,\
     get_jap_te_meta,get_eval_monkey_color,\
-    get_jap_te_metagosr,get_jap_te_metaosr,\
+    get_jap_te_metagosr,get_jap_te_metaosr,get_jpn_te_meta_ostr,\
     get_eval_kr_color,get_kr_te_meta
 import os
 def get_dataloadercfgs(root,te_meta_path,tr_meta_path,maxT_mjst,maxT_chsHS,bsize):
@@ -48,6 +48,13 @@ def get_eval_dssgosr(dsroot,maxT_mjst,maxT_chs):
     return te_meta_path_chsjap,te_meta_path_mjst,mjst_eval_ds,chs_eval_ds
 def get_eval_dssosr(dsroot,maxT_mjst,maxT_chs):
     te_meta_path_chsjap = get_jap_te_metaosr(dsroot);
+    te_meta_path_mjst = os.path.join(dsroot, "dicts", "dab62cased.pt");
+    mjst_eval_ds = get_test_all_uncased_dsrgb(maxT_mjst, dsroot, None, 16,hw=[32,128])
+    chs_eval_ds = get_eval_jap_color(dsroot, maxT_chs,hw=[32,128]);
+    return te_meta_path_chsjap,te_meta_path_mjst,mjst_eval_ds,chs_eval_ds
+
+def get_eval_dssostr(dsroot,maxT_mjst,maxT_chs):
+    te_meta_path_chsjap = get_jpn_te_meta_ostr(dsroot);
     te_meta_path_mjst = os.path.join(dsroot, "dicts", "dab62cased.pt");
     mjst_eval_ds = get_test_all_uncased_dsrgb(maxT_mjst, dsroot, None, 16,hw=[32,128])
     chs_eval_ds = get_eval_jap_color(dsroot, maxT_chs,hw=[32,128]);
