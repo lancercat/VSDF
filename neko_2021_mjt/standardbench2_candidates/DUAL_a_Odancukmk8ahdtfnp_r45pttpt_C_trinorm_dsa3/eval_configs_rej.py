@@ -14,6 +14,7 @@ def dan_mjst_eval_cfg(
         epath=None;
     te_meta_path_chsjap, te_meta_path_mjst, mjst_eval_ds, chs_eval_ds=get_eval_dssosr(dsroot,25,30);
     te_meta_path_chsjapg, te_meta_path_mjstg, mjst_eval_dsg, chs_eval_dsg=get_eval_dssgosr(dsroot,25,30);
+    te_meta_path_chsjapo, te_meta_path_mjsto, mjst_eval_dso, chs_eval_dso=get_eval_dss_ostr(dsroot,25,30);
 
     task_dict = {}
     # task_dict = arm_base_task_default2(task_dict, "base_mjst_", osdanmk7_eval_routine_cfg, 25,
@@ -26,7 +27,7 @@ def dan_mjst_eval_cfg(
                                          te_meta_path_chsjapg, chs_eval_dsg,
                                          log_path,force_skip_ctx=True,name="GOSR",measure_rej=True);
     task_dict = arm_base_mk8_task_default(task_dict, "base_chs_", osdanmk8_eval_routine_cfg, 30,
-                                          get_eval_dss_ostr, chs_eval_dsg,
+                                          te_meta_path_chsjapo, chs_eval_dso,
                                           log_path, force_skip_ctx=True, name="OSTR", measure_rej=True);
 
     return \
