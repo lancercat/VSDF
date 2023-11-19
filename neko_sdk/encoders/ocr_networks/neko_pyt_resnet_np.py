@@ -1,6 +1,6 @@
 from torch import nn;
 
-from torchvision.models.resnet import conv1x1,BasicBlock,Bottleneck,model_urls;
+from torchvision.models.resnet import conv1x1,BasicBlock,Bottleneck;
 
 class ResNetNP(nn.Module):
 

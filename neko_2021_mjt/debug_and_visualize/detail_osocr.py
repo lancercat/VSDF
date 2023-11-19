@@ -341,12 +341,12 @@ def make_ch2(root):
 
 # make_ch2("/run/media/lasercat/ssddata/ijcai22_candidates/g2/DUAL_ch_asc_Odancukmk7hnp_r45_C_trinorm_dsa3_va9r_lsct3sp_2x/");
 methods=[
-    find_export_root()+"/DUAL_a_Odancukmk7hdtfnp_r45_C_trinorm_dsa3/jtrmodels/closeset_benchmarks/",
-    find_export_root()+"/DUAL_a_Odancukmk7hnp_r45_C_trinorm_dsa3/jtrmodels/closeset_benchmarks/",
-    find_export_root()+"/DUAL_a_Odancukmk8ahdtfnp_r45_C_trinorm_dsa3/jtrmodels/closeset_benchmarks/",
+    # find_export_root()+"/DUAL_a_Odancukmk7hdtfnp_r45_C_trinorm_dsa3/jtrmodels/closeset_benchmarks/",
+    # find_export_root()+"/DUAL_a_Odancukmk7hnp_r45_C_trinorm_dsa3/jtrmodels/closeset_benchmarks/",
+    find_export_root()+"/DUAL_a_Odancukmk8ahdtfnp_r45pttpt_C_trinorm_dsa3/jtrmodels/closeset_benchmarks/",
 ]
 for m in methods:
     makejpg(m,960,extra_terms=0,rows=1);
     makejpb(m,480,extra_terms=0,rows=1);
-    make_krg(m,960,extra_terms=0,rows=1);
-    make_krb(m,480,extra_terms=0,rows=1);
+    # make_krg(m,960,extra_terms=0,rows=1);
+    # make_krb(m,480,extra_terms=0,rows=1);
