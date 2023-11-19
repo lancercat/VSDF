@@ -26,7 +26,7 @@ def dan_mjst_eval_cfg(
                                          te_meta_path_chsjapg, chs_eval_dsg,
                                          log_path,force_skip_ctx=True,name="GOSR",measure_rej=True);
     task_dict = arm_base_mk8_task_default(task_dict, "base_chs_", osdanmk8_eval_routine_cfg, 30,
-                                          te_meta_path_chsjap, chs_eval_dsg,
+                                          get_eval_dss_ostr, chs_eval_dsg,
                                           log_path, force_skip_ctx=True, name="OSTR", measure_rej=True);
 
     return \
