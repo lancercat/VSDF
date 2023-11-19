@@ -53,7 +53,7 @@ def get_eval_dssosr(dsroot,maxT_mjst,maxT_chs):
     chs_eval_ds = get_eval_jap_color(dsroot, maxT_chs,hw=[32,128]);
     return te_meta_path_chsjap,te_meta_path_mjst,mjst_eval_ds,chs_eval_ds
 
-def get_eval_dssostr(dsroot,maxT_mjst,maxT_chs):
+def get_eval_dss_ostr(dsroot,maxT_mjst,maxT_chs):
     te_meta_path_chsjap = get_jpn_te_meta_ostr(dsroot);
     te_meta_path_mjst = os.path.join(dsroot, "dicts", "dab62cased.pt");
     mjst_eval_ds = get_test_all_uncased_dsrgb(maxT_mjst, dsroot, None, 16,hw=[32,128])
